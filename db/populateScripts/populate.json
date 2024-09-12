@@ -1,0 +1,20 @@
+{
+  "attendees": {
+    "run": true,
+    "max": 3000
+  },
+  "events": {
+    "run": true,
+    "max": 1000
+  },
+  "titles": {
+    "run": true,
+    "max": 500
+  },
+  "copies": {
+    "max": 2000
+  },
+  "checkouts": {
+    "max": 100
+  }
+}
