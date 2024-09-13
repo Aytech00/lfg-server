@@ -13,6 +13,11 @@ const generateCheckoutSession = async (req, res) => {
 					quantity: 1,
 				},
 			],
+			discounts: [
+				{
+					promotion_code: process.env.promoCode, // Replace with your coupon ID
+				},
+			],
 			billing_address_collection: "required",
 			phone_number_collection: { enabled: true },
 			success_url: `${process.env.CLIENT_URL}/payment/success`,
