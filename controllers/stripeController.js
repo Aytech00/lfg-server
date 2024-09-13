@@ -13,8 +13,8 @@ const generateCheckoutSession = async (req, res) => {
 					quantity: 1,
 				},
 			],
-			success_url: `${process.env.CLIENT_URL}/pricing/success`,
-			cancel_url: `${process.env.CLIENT_URL}/pricing/error`,
+			success_url: `${process.env.CLIENT_URL}/payment/success`,
+			cancel_url: `${process.env.CLIENT_URL}/payment/error`,
 		});
 
 		console.log(session);
