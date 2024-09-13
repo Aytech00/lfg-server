@@ -24,8 +24,6 @@ const generateCheckoutSession = async (req, res) => {
 			cancel_url: `${process.env.CLIENT_URL}/payment/error`,
 		});
 
-		console.log(session);
-
 		// Store session.id so that it can be retrieved later for verification
 
 		res.json({ url: session.url });
