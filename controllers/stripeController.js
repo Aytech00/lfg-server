@@ -9,7 +9,7 @@ const generateCheckoutSession = async (req, res) => {
 			payment_method_types: ["card"],
 			line_items: [
 				{
-					price: process.env.priceID,
+					price: process.env.priceId,
 					quantity: 1,
 				},
 			],
