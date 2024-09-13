@@ -13,6 +13,8 @@ const generateCheckoutSession = async (req, res) => {
 					quantity: 1,
 				},
 			],
+			billing_address_collection: "required",
+			phone_number_collection: { enabled: true },
 			success_url: `${process.env.CLIENT_URL}/payment/success`,
 			cancel_url: `${process.env.CLIENT_URL}/payment/error`,
 		});
