@@ -3,7 +3,7 @@ const attendeeController = require("./controllers/attendeeController.js");
 const eventController = require("./controllers/eventController.js");
 const gamesController = require("./controllers/gamesController.js");
 const devController = require("./controllers/devcontroller.js");
-const { generateCheckoutSession } = require("./controllers/stripeController.js");
+const { generateCheckoutSession, validateCheckoutSession } = require("./controllers/stripeController.js");
 
 const router = express.Router();
 
@@ -38,5 +38,6 @@ router.delete("/api/gamelib/copy/remove", gamesController.removeCopy);
 
 // stripe endpoints
 router.get("/api/stripe/create-checkout-session", generateCheckoutSession);
+router.get("/api/stripe/validate-checkout-session", validateCheckoutSession);
 
 module.exports = router;
